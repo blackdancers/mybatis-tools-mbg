@@ -20,7 +20,7 @@
 
 		<!-- 数据库 -->
 		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
-			connectionURL="jdbc:mysql://192.168.1.17:3306/wk-ec?characterEncoding=utf8"
+			connectionURL="jdbc:mysql://192.168.2.18:3306/lt-web?characterEncoding=utf8"
 			userId="development" password="development" />
 
 		<javaTypeResolver>
@@ -32,8 +32,8 @@
 
 		<!-- 数据库表对应的model -->
 		<!-- targetProject的目录配置成本地机器的workspace -->
-		<javaModelGenerator targetPackage="com.wk.ec.api.goods.entity"
-			targetProject="C:\Users\wangwh\Desktop\wk-ec-mapper\java" >
+		<javaModelGenerator targetPackage="com.cn.lt.front.favorite.entity"
+			targetProject="E:\git-repository\ec-tools-mbg\src\main\java" >
 			<property name="enableSubPackages" value="true" />
 			<property name="trimStrings" value="true" />
 			<property name="rootClass" value="com.wk.ec.common.entity.AbstractBaseEntity" />
@@ -41,16 +41,16 @@
 
 
 		<!-- 控制Model的xmlMapper文件 -->
-		<sqlMapGenerator targetPackage="mapper" targetProject="C:\Users\wangwh\Desktop\wk-ec-mapper\resources">
+		<sqlMapGenerator targetPackage="mapper" targetProject="E:\git-repository\ec-tools-mbg\src\main\resources\mybatis">
 			<property name="enableSubPackages" value="true" />
 		</sqlMapGenerator>
 
-		<javaClientGenerator targetPackage="com.wk.ec.core.goods.dao"
-			targetProject="C:\Users\wangwh\Desktop\wk-ec-mapper\java" type="XMLMAPPER" />
+		<javaClientGenerator targetPackage="com.cn.lt.front.favorite.dao"
+			targetProject="E:\git-repository\ec-tools-mbg\src\main\java" type="XMLMAPPER" />
 
 		<!-- schema你的数据库，tableName表明，domainObjectName对应你的javabean类名，是否生成相应的example -->
 		<!-- ignoreColumn 表示忽略哪些列 -->
-		<table schema="test" tableName="goods_category"
+		<table schema="test" tableName="goods_follow"
 			enableCountByExample="false" enableUpdateByExample="false"
 			enableDeleteByExample="false" enableSelectByExample="false"
 			selectByExampleQueryId="false">
